@@ -1,0 +1,24 @@
+---
+title: "Week_1"
+author: "John Viviani"
+date: "1/13/2020"
+output:
+  md_document:
+      variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# reorder() helps you order factor levels
+
+# converting wide to long:
+# reshape2::melt
+# tidyr::gather
+
+# spread will invert it
+
+```
+
