@@ -13,6 +13,7 @@ library(tidyverse)
 library(shiny)
 library(htmltools)
 library(shinydashboard)
+library(ggplot2)
 
 ```
 
@@ -27,6 +28,12 @@ DT::datatable(mtcars, options = list(
   bPaginate = FALSE)
   )
 
+ggplot(data = mtcars, mapping = aes(x = mpg, y = wt)) +
+  geom_point() + 
+  coord_flip()
+
+# As weight goes up, miles per gallon does down.
+
 ```
 
 Row {data-width=350}
@@ -35,12 +42,21 @@ Row {data-width=350}
 ### Chart B
 
 ```{r}
+# Let's look at mpg vs horsepower
+
+ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +
+  geom_point() + 
+  coord_flip()
 
 ```
 
 ### Chart C
 
 ```{r}
+# hp versus number of cylinders
+
+ggplot(data = mtcars, mapping = aes(x = cyl, y = hp)) +
+  geom_point()
 
 ```
 
